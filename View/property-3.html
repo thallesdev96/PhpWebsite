@@ -1,0 +1,44 @@
+<section class="property-details">
+    <div class="container">
+        <div class="property-images">
+            <img src="https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?q=80&w=2881&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Property Image 1">
+            <img src="https://images.unsplash.com/photo-1607961418926-93bf4210d345?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Property Image 2">
+            <img src="https://images.unsplash.com/photo-1505015920881-0f83c2f7c95e?q=80&w=2897&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Property Image 3">
+        </div>
+        <div class="property-info">
+            <h2><?php echo $propertyDetails['title']; ?></h2>
+            <p class="location"><?php echo $propertyDetails['location']; ?></p>
+            <p class="price"><?php echo $propertyDetails['price']; ?></p>
+            <section class="about">
+                <div class="container">
+                    <h2>About</h2>
+                    <div class="details">
+                        <p><strong>Number of Bathrooms: 3</strong> <?php echo $propertyDetails['bathrooms']; ?></p>
+                        <p><strong>Number of Rooms: 2</strong> <?php echo $propertyDetails['rooms']; ?></p>
+                        <p><strong>Area Description: Spanning across multiple floors, the house offers generous living spaces, making it ideal for a large family, a group of professionals, or as a potential investment property. The interior design is likely a fusion of contemporary elements and traditional features, offering both comfort and style.</strong> <?php echo $propertyDetails['area_description']; ?></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="contact-form">
+            <div class="container">
+                <h2>Contact Agent</h2>
+                <form action="submit.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</section>
